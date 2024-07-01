@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button';
+import Input from './components/Input';
+import Heading from './components/Heading';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="homePage">
+      <header className='header'>
+        <Heading title='Welcome to the Chat!' subtitle='Please sign in to contact your friends' center />
       </header>
+      <div className='formContainer'>
+        <form action="" className='signUpForm'>
+          <Input type="email" placeholder='Email' />
+          <Input type="password" placeholder='Password'/>
+          <Button label='Sign Up' />
+        </form>
+        <p className='underFormText'>Don't have an account? <a href="" className='link'>Sign Up</a> here!</p>
+      </div>
     </div>
   );
 }
