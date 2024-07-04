@@ -1,12 +1,11 @@
-import { useEffect, useState } from 'react';
-import './App.css';
-import Button from './components/Button';
-import Input from './components/Input';
-import Heading from './components/Heading';
-import axios from 'axios';
+import axios from "axios";
+import { useState, useEffect } from "react";
+import Button from "../components/Button";
+import Heading from "../components/Heading";
+import Input from "../components/Input";
 
-function App() {
-  const [message, setMessage] = useState('');
+export default function SignUp() {
+    const [message, setMessage] = useState('');
 
   useEffect(() => {
    axios.get('http://localhost:3500/')
@@ -26,12 +25,11 @@ function App() {
         <form action="" className='signUpForm'>
           <Input type="email" placeholder='Email' />
           <Input type="password" placeholder='Password'/>
+          <Input type="password" placeholder='Confirm Password'/>
           <Button label='Sign Up' />
         </form>
-        <p className='underFormText'>Don't have an account? <a href="" className='link'>Sign Up</a> here!</p>
+        <p className='underFormText'>Already have an account? <a href="/" className='link'>Sign In</a> here!</p>
       </div>
     </div>
   );
 }
-
-export default App;
