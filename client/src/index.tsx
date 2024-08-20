@@ -5,6 +5,7 @@ import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './error-page';
 import SignUp from './routes/signUp';
+import Dashboard from './routes/dashboard';
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
     path: '/signUp',
     element: <SignUp />,
     errorElement: <ErrorPage />,
+  },
+  {
+    path: '/dashboard',
+    element: <Dashboard />,
+    errorElement: <ErrorPage />
   }
 ])
 

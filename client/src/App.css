@@ -44,6 +44,7 @@
         border: 1px solid #6e6e6a;
         border-radius: 10px;
         background-color: transparent;
+        color: #F8F9FF;
 
         &&::placeholder {
           color:#F8F9FF;
